@@ -12,7 +12,7 @@ Currently this package can be installed manually by following these steps:
 
 1. Add this entry to your `package.json` dependencies:
 ```json
-  "@types/screeps-arena": "screepers/typed-screeps-arena#develop"
+  "@types/screeps-arena": "screepers/typed-screeps-arena#season-alpha"
 ```
 
 2. Run `npm install` (or `yarn install`) to install dependencies.
