@@ -18,7 +18,7 @@ import {
   getTerrainAt,
 } from "game/utils";
 import { CostMatrix } from "game/path-finder";
-import { RESOURCE_ENERGY } from "game/constants";
+import { RESOURCE_ENERGY, RIGHT, TOP, TOP_RIGHT } from "game/constants";
 import { Flag } from "arena/season_beta/capture_the_flag/basic/prototypes";
 import {
   ScoreCollector,
@@ -133,6 +133,8 @@ export function loop(): void {
   if (mySpawn) {
     const energyStored = mySpawn.store[RESOURCE_ENERGY];
     const maxCapacity = mySpawn.store.getCapacity(RESOURCE_ENERGY);
+
+    mySpawn.setDirections([TOP, TOP_RIGHT, RIGHT]);
 
     const spawnResult = mySpawn.spawnCreep([work, move, carry]);
     if (spawnResult.object) {
